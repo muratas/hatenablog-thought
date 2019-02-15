@@ -1,24 +1,24 @@
 # hatenablog-thought
 
-[はてなブログ](https://hatenablog.com/)のブログテーマ「Thought」です。
+Blog theme for [Hatena Blog](https://hatenablog.com/) named Thought.
 
-テーマストアから[インストールして使う](http://blog.hatena.ne.jp/-/store/theme/17680117126965268278)ことができます。
+You can install this theme from [the theme store](http://blog.hatena.ne.jp/-/store/theme/17680117126965268278) and use it.
 
-## 開発
+## Development
 
-セットアップ：
+Setup:
 
 ```
 yarn install
 ```
 
-Sassの監視とコンパイルを開始：
+Start monitoring and compiling Sass:
 
 ```
 gulp
 ```
 
-はてなブログの「デザインCSS」に設定する：
+Set up the CSS for “Design CSS” of Hatena blog:
 
 ```
 @import 'http://localhost:3030/thought.css';
