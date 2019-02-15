@@ -22,5 +22,4 @@ gulp
 
 ```
 @import 'http://localhost:3030/thought.css';
-
 ```
