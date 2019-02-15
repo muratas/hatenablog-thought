@@ -1,0 +1,53 @@
+@mixin transition(
+  $property: all,
+  $duration: .1s,
+  $easing: linear,
+) {
+  transition: $property $duration $easing;
+}
+
+@mixin button() {
+  display: inline-block;
+  border: 1px solid $color-black;
+  background: $color-white;
+  text-decoration: none;
+  @include transition();
+  &:hover,
+  &:focus {
+    background: $color-black;
+    color: $color-white;
+  }
+}
+
+@mixin button-medium($fz: $fz-medium) {
+  @include button();
+  height: $fz * 3;
+  line-height: $fz * 3;
+  padding: 0 $fz * 2;
+  border-radius: $fz * 3 / 2;
+}
+
+@mixin button-small($fz: $fz-medium) {
+  @include button();
+  height: $fz * 2;
+  line-height: $fz * 2;
+  padding: 0 $fz;
+  border-radius: $fz * 2;
+}
+
+@mixin default-link-styles($hideUnderline: true, $linkColor: $color-black) {
+  color: $linkColor;
+  text-decoration: if($hideUnderline == true, none, underline);
+  &:visited { color: $linkColor; }
+  &:hover,
+  &:active {
+    color: $color-hover;
+    text-decoration: underline;
+  }
+}
+
+@mixin text-overflow ($v: ellipsis) {
+  text-overflow: $v;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: $color-white;
+  color: $color-black;
+  font-size: $fz-medium;
+  line-height: $lh-default;
+  font-family: $font-sans;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  cursor: default;
+  @media #{$viewport-580} {
+    font-size: $fz-sp-medium;
+  }
+}
+a {
+  @include default-link-styles();
+}
+a,
+pre {
+  word-break: break-all;
+  overflow: hidden;
+}
+pre {
+  white-space: pre-wrap;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-feature-settings: 'palt';
+  letter-spacing: 1px;
+}
+
+.header-image-enable, // タイトル画像（画像＋テキスト）
+.header-image-only {  // タイトル画像（画像のみ）
+  #blog-title {
+    margin: 0 0 $margin-large -1 * $margin-large;
+    width: calc(100% + #{$margin-large} * 2);
+  }
+  #top-editarea {
+    margin: $margin-large 0 $margin-xlarge;
+  }
+}
+.header-image-enable {
+  #blog-title-inner {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 20%, transparent 50%, transparent 100%);
+    }
+  }
+  #blog-title-content {
+    position: absolute;
+    left: $margin-large;
+    bottom: $margin-medium;
+    width: calc(100% - #{$margin-large} * 2);
+  }
+}
+
+// ref. <http://help.hatenablog.com/entry/theme/custom-theme#%E3%83%98%E3%83%83%E3%83%80%E3%83%BC%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC>
+#globalheader-container {
+  background: $color-white;
+  color: $color-black;
+}
+
+#container,
+#footer {
+  max-width: calc(#{$fz-medium} * 35 + #{$margin-large});
+  margin: 0 auto;
+  padding: 1px $margin-large;
+  @media #{$viewport-767} {
+    max-width: calc(#{$fz-medium} * 28 + #{$margin-large});
+  }
+  @media #{$viewport-580} {
+    max-width: 100%;
+    padding: 0 $margin-small;
+  }
+}
+#container {
+  background: $color-white;
+  margin: $margin-medium + $margin-xlarge auto;
+  @media #{$viewport-580} {
+    margin: 0;
+    overflow: hidden;
+  }
+}
+#blog-title {
+  margin: $margin-large 0 $margin-xlarge;
+}
+#title {
+  font-size: $fz-medium;
+  @media #{$viewport-580} {
+    font-size: $fz-sp-medium;
+  }
+}
+#blog-description {
+  font-weight: normal !important;
+  line-height: $lh-xsmall;
+  color: $color-darkGray;
+  margin: $margin-xsmall 0 0;
+  font-size: $fz-small;
+  @media #{$viewport-580} {
+    font-size: $fz-sp-small;
+  }
+}
+#top-editarea {
+  margin: $margin-xlarge 0;
+}
+#top-box {
+  margin: $margin-large 0;
+  font-size: $fz-small;
+  @media #{$viewport-580} {
+    font-size: $fz-sp-small;
+  }
+}
+#main {
+  margin: $margin-xlarge * 2 0;
+  @media #{$viewport-580} {
+    margin: $margin-xlarge 0;
+  }
+}
+.breadcrumb-inner {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    @include default-link-styles(false);
+    margin: 0 0 $margin-xsmall;
+  }
+  .breadcrumb-gt {
+    margin: 0 $margin-xsmall $margin-xsmall;
+  }
+}
+.pager {
+  margin: $margin-large 0 0;
+  line-height: $lh-xsmall;
+  & > span {
+    display: flex;
+    &:before {
+      font-weight: bold;
+      vertical-align: top;
+      letter-spacing: 1px;
+      margin: 0 .5em 0 0;
+    }
+    & + span {
+      margin: $margin-small 0 0;
+    }
+  }
+  a {
+    flex: 1;
+    min-width: 0;
+    font-feature-settings: 'palt';
+    letter-spacing: 1px;
+  }
+}
+.pager-prev {
+  &:before {
+    content: '←';
+  }
+}
+.pager-next {
+  &:before {
+    content: '→';
+  }
+}
+.pager-arrow {
+  display: none;
+}
+#bottom-editarea {
+  margin: $margin-xlarge 0 $margin-large;
+}
+#footer {
+  margin: $margin-large auto $margin-xlarge;
+  font-size: $fz-small;
+  @media #{$viewport-580} {
+    margin: $margin-large auto;
+    font-size: $fz-sp-small;
+  }
+}
+.footer-address {
+  img, span {
+    vertical-align: middle;
+  }
+}
+
+// search {{{
+.search-result-form,
+.search-form {
+  margin: 1em 0 0;
+  display: flex;
+  flex-direction: row-reverse;
+  border: none;
+  border-radius: none;
+  max-width: none;
+  background: $color-white;
+  &:hover {
+    input {
+      border-color: $color-hover !important;
+    }
+  }
+  input {
+    box-sizing: border-box;
+    background: $color-white !important;
+    padding: 0 $margin-small 0 0 !important;
+    height: 44px !important;
+    line-height: 44px;
+    outline: none;
+    border: none;
+    border: 1px solid $color-gray !important;
+  }
+  .search-result-input,
+  .search-module-input {
+    flex: 1;
+    min-width: 0;
+    border-left-width: 0 !important;
+    padding-left: 0;
+    border-radius: 0 $radius-medium $radius-medium 0;
+    &:focus {
+      border-color: $color-black !important;
+      & + .search-result-button,
+      & + .search-module-button {
+        border-color: $color-black !important;
+      }
+    }
+  }
+  .search-result-button,
+  .search-module-button {
+    position: static;
+    width: 44px;
+    background: rgba(255,255,255,.5) url(https://blog.st-hatena.com/images/theme/search.png) no-repeat center center !important;
+    text-indent: -99999px;
+    cursor: pointer;
+    border-right-width: 0 !important;
+    border-radius: $radius-medium 0 0 $radius-medium;
+    opacity: 1;
+  }
+}
+// }}}
