@@ -214,9 +214,12 @@
     vertical-align: bottom;
   }
   figcaption {
-    margin: $margin-small 0 0;
+    max-width: 75%;
+    margin: $margin-small auto 0;
     color: $color-darkGray;
     font-size: $fz-small;
+    line-height: $lh-small;
+    opacity: 1;
     @media #{$viewport-580} {
       font-size: $fz-sp-small;
     }
@@ -242,6 +245,7 @@
   }
   dd {
     margin: 0 0 0 $fz-medium;
+    line-height: $lh-small;
     @media #{$viewport-580} {
       margin: $fz-sp-medium;
     }
