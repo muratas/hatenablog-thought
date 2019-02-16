@@ -111,6 +111,7 @@
   }
 }
 .entry-content {
+  line-height: $lh-xsmall;
   & > *:first-child {
     margin: 0;
   }
@@ -267,7 +268,7 @@
     }
   }
   cite:not(.hatena-citation) {
-    line-height: $lh-xsmall;
+    line-height: $lh-small;
     padding: 0 0 0 $fz-medium * 2;
     margin: 1em 0 1em $fz-medium * 2;
     @media #{$viewport-580} {
