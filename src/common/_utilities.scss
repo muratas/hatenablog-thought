@@ -1,17 +1,21 @@
-.button {
-  @include button-medium();
-}
+.entry-content {
+  .button {
+    @include button-medium();
+  }
 
-.border {
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid rgba(0,0,0,.15);
-    box-sizing: border-box;
+  .border {
+    [itemtype="http://schema.org/Photograph"] {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(0,0,0,.15);
+        box-sizing: border-box;
+      }
+    }
   }
 }
