@@ -33,6 +33,9 @@
       @include default-link-styles();
     }
   }
+  .hatena-follow-button-box {
+    margin: 0;
+  }
 }
 .profile-icon-link {
   display: block;
@@ -49,12 +52,13 @@
   }
 }
 .profile-activities {
-  margin: $margin-xsmall 0;
+  margin: $margin-xsmall 0 0;
   opacity: 1;
   color: $color-darkGray;
 }
 .profile-description {
-  line-height: $lh-xsmall;
+  line-height: $lh-small;
+  margin: $margin-small 0 $margin-small + $margin-xxsmall;
   p {
     margin: $margin-xsmall 0 0;
   }
@@ -113,7 +117,7 @@
   font-size: $fz-medium;
   font-feature-settings: 'palt';
   letter-spacing: 1px;
-  line-height: $lh-xsmall;
+  line-height: $lh-small;
   @media #{$viewport-580} {
     font-size: $fz-sp-medium;
   }
