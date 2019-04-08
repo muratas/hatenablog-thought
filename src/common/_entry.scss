@@ -39,9 +39,12 @@
     }
   }
 }
-.entry-date a,
-.entry-categories a {
-  @include default-link-styles(true, $color-darkGray);
+.entry-date,
+.entry-categories {
+  line-height: $lh-xsmall;
+  a {
+    @include default-link-styles(true, $color-darkGray);
+  }
 }
 .entry-date {
   order: 2;
@@ -226,6 +229,7 @@
   }
   ul, ol {
     padding-left: $fz-medium + 3px;
+    line-height: $lh-small;
     @media #{$viewport-580} {
       padding-left: $fz-sp-medium + 3px;
     }
