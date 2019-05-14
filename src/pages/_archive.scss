@@ -10,12 +10,13 @@
       display: flex;
       flex-wrap: wrap;
       a {
-        &:hover:before {
-          color: $color-darkGray;
-        }
+        @include default-link-styles(true, $color-darkGray);
         &:not(:first-child):before {
-          content: '、';
+          content: '･';
           display: inline-block;
+          margin: 0 .25em;
+          vertical-align: top;
+          color: $color-gray;
         }
       }
     }

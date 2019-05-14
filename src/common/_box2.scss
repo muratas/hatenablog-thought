@@ -133,19 +133,18 @@
   flex-wrap: wrap;
   margin-top: $margin-xxsmall !important;
   a {
+    @include default-link-styles(true, $color-darkGray);
     font-size: $fz-small;
-    color: $color-darkGray;
     margin: 0;
     @media #{$viewport-580} {
       font-size: $fz-sp-small;
     }
-    &:hover:before {
-      color: $color-darkGray;
-    }
     &:not(:first-child):before {
-      content: '、';
+      content: '･';
       display: inline-block;
-      color: $color-darkGray;
+      margin: 0 .1em 0 .25em;
+      vertical-align: top;
+      color: $color-gray;
     }
   }
 }

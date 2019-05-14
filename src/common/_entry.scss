@@ -58,12 +58,12 @@
     min-width: 0;
   }
   a {
-    &:hover:before {
-      color: $color-darkGray;
-    }
     &:not(:first-child):before {
-      content: '、';
+      content: '･';
       display: inline-block;
+      margin: 0 .25em;
+      vertical-align: top;
+      color: $color-gray;
     }
   }
 }
