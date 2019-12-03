@@ -8,16 +8,21 @@ You can install this theme from [the theme store](http://blog.hatena.ne.jp/-/sto
 
 You can style the content using the following CSS classes.
 
-<dl>
-  <div>
-    <dt><code>button</code></dt>
-    <dd>Change the link element to look like a button.</dd>
-  </div>
-  <div>
-    <dt><code>border</code></dt>
-    <dd>Enclose the element with this class in a frame. Unlike ordinary border, it is applied so that it overlaps the inside of an element. It is supposed to be used mainly when attaching a frame to an image.</dd>
-  </div>
-</dl>
+#### `button`
+
+Change the link element to look like a button.
+
+```
+<a href="#" class="button">Text</a>
+```
+
+#### `border`
+
+Enclose the element with this class in a frame. Unlike ordinary border, it is applied so that it overlaps the inside of an element. It is supposed to be used mainly when attaching a frame to an image.
+
+```
+<p class="border">[f:id:murata_s:20191002134857j:plain]</p>
+```
 
 ## Development
 
