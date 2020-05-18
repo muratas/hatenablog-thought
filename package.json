@@ -9,5 +9,8 @@
     "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "normalize.css": "^8.0.1"
+  },
+  "scripts": {
+    "develop": "gulp"
   }
 }

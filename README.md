@@ -35,7 +35,7 @@ yarn install
 Start monitoring and compiling Sass:
 
 ```
-gulp
+yarn develop
 ```
 
 Set up the CSS for “Design CSS” of Hatena blog:
