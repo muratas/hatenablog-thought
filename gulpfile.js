@@ -27,7 +27,7 @@ gulp.task('build-sass', () => {
       }
     }))
     .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(gulp.dest('dest'));
 });
 

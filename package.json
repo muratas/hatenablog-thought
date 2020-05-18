@@ -12,5 +12,8 @@
   },
   "scripts": {
     "develop": "gulp"
-  }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }
