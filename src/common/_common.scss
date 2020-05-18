@@ -28,14 +28,20 @@ pre {
 pre {
   white-space: pre-wrap;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
-  font-feature-settings: 'palt';
+  font-feature-settings: "palt";
   letter-spacing: 1px;
 }
 
 .header-image-enable, // タイトル画像（画像＋テキスト）
-.header-image-only {  // タイトル画像（画像のみ）
+.header-image-only {
+  // タイトル画像（画像のみ）
   #blog-title {
     margin: 0 0 $margin-large -1 * $margin-large;
     width: calc(100% + #{$margin-large} * 2);
@@ -47,14 +53,20 @@ h1, h2, h3, h4, h5, h6 {
 .header-image-enable {
   #blog-title-inner {
     &:before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to top, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 20%, transparent 50%, transparent 100%);
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.2) 20%,
+        transparent 50%,
+        transparent 100%
+      );
     }
   }
   #blog-title-content {
@@ -147,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
       font-weight: bold;
       vertical-align: top;
       letter-spacing: 1px;
-      margin: 0 .5em 0 0;
+      margin: 0 0.5em 0 0;
     }
     & + span {
       margin: $margin-small 0 0;
@@ -156,18 +168,18 @@ h1, h2, h3, h4, h5, h6 {
   a {
     flex: 1;
     min-width: 0;
-    font-feature-settings: 'palt';
+    font-feature-settings: "palt";
     letter-spacing: 1px;
   }
 }
 .pager-prev {
   &:before {
-    content: '←';
+    content: "←";
   }
 }
 .pager-next {
   &:before {
-    content: '→';
+    content: "→";
   }
 }
 .pager-arrow {
@@ -185,7 +197,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .footer-address {
-  img, span {
+  img,
+  span {
     vertical-align: middle;
   }
 }
@@ -213,6 +226,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 44px;
     outline: none;
     border: none;
+    -webkit-appearance: none;
     border: 1px solid $color-gray !important;
   }
   .search-result-input,
@@ -234,7 +248,9 @@ h1, h2, h3, h4, h5, h6 {
   .search-module-button {
     position: static;
     width: 44px;
-    background: rgba(255,255,255,.5) url(https://blog.st-hatena.com/images/theme/search.png) no-repeat center center !important;
+    background: rgba(255, 255, 255, 0.5)
+      url(https://blog.st-hatena.com/images/theme/search.png) no-repeat center
+      center !important;
     text-indent: -99999px;
     cursor: pointer;
     border-right-width: 0 !important;
